@@ -134,6 +134,7 @@
 				3FFD103E1AFD81CA0013A652 /* Sources */,
 				3FFD103F1AFD81CA0013A652 /* Frameworks */,
 				3FFD10401AFD81CA0013A652 /* Resources */,
+				3FFD106F1AFD83A70013A652 /* Uniquify and Sort Project */,
 			);
 			buildRules = (
 			);
@@ -218,6 +219,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3FFD106F1AFD83A70013A652 /* Uniquify and Sort Project */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Uniquify and Sort Project";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "sh $SRCROOT/uniquify.sh";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		3FFD103E1AFD81CA0013A652 /* Sources */ = {
