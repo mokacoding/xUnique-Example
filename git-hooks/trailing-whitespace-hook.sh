@@ -1,5 +1,8 @@
 #!/bin/sh
 
+red="\033[31m"
+reset="\033[m"
+
 if git rev-parse --verify HEAD >/dev/null 2>&1
 then
 	against=HEAD
@@ -11,10 +14,12 @@ fi
 # If there are whitespace errors, print the offending file names
 git diff-index --check --cached $against --
 if [ $? -ne 0 ]; then
+  printf "$red"
   cat <<EOF
 
 There are trailing whitespaces in the changes about to be committed.
 Please fix them, add the changes, and commit again.
 EOF
+  printf "$reset"
   exit 1
 fi
